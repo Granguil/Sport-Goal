@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Sport-Goal",
+    "slug": "Sport-Goal",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Sport-Goal"
+}
