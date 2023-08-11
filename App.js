@@ -88,23 +88,23 @@ export default function App() {
 
   useEffect(()=>{
     if(os.platform == undefined || os.platform()!='browser'){
-    EFS.getInfoAsync(filePath).then(file=>{
-      if(file.exists)
-      {
-        EFS.readAsStringAsync(filePath).then(value=>{
-          const oldData = JSON.parse(value);
-          setData({...oldData});
-          setLoad(true);
-        })
-      }
-      else
-      {
-        Update(false);
-      }
-    })
-  }else{
-    Update(false);
-  }
+      EFS.getInfoAsync(filePath).then(file=>{
+        if(file.exists)
+        {
+          EFS.readAsStringAsync(filePath).then(value=>{
+            const oldData = JSON.parse(value);
+            setData({...oldData});
+            setLoad(true);
+          })
+        }
+        else
+        {
+          Update(false);
+        }
+      })
+    }else{
+      Update(false);
+    }
   },[])
   return (
     <View style={styles.container}>
